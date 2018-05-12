@@ -389,7 +389,6 @@
                 </div>
             </div>
             <div class="actions">
-                <div class="ui button cancel">Cancel</div>
                 <div class="ui button ok">OK</div>
             </div>
         </div>
@@ -398,7 +397,6 @@
 </html>
 <script>
     $('.ui.modal').modal('attach events', '.submit', 'show');
-    $('.ui.modal').modal('attach events', '.cancel', 'hide');
     $('.ui.modal').modal('attach events', '.ok', 'hide');
     $(".submit").on("click", function(event) {
         event.preventDefault();
@@ -418,7 +416,7 @@
             }
         }
         if(blankFlag){
-            $('.description').append("<h1>Please fill in the rest of the survey!🐸</h1>");
+            $('.description').append("<h1>🐸Please fill in the rest of the survey!🐸</h1>");
         }
         else{
             let surveyName = $("#name").val().trim();
