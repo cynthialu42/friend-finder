@@ -378,37 +378,102 @@
             <br>
             <button class="ui button submit text container" type="submit">Submit</button>
         </form>
+        <div class="ui modal">
+            <i class="close icon"></i>
+            <div class="header js-header">
+            </div>
+            <div class="image content">
+                <div class="image js-image">
+                </div>
+                <div class="description">
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui button cancel">Cancel</div>
+                <div class="ui button ok">OK</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
 <script>
-    
+    $('.ui.modal').modal('attach events', '.submit', 'show');
+    $('.ui.modal').modal('attach events', '.cancel', 'hide');
+    $('.ui.modal').modal('attach events', '.ok', 'hide');
     $(".submit").on("click", function(event) {
         event.preventDefault();
-    
+        let blankFlag = false;
+        $('.js-header').empty()
+        $('.js-image').empty();
         var surveyAnswers = [];
         for (let i = 1; i < 11; i++){
             let questionSelection = $(`input[name='q${i}']:checked`).val();
-            surveyAnswers.push(parseInt(questionSelection));
+            console.log(questionSelection);
+            if (questionSelection === undefined){
+                blankFlag = true;
+                break;
+            }
+            else{
+                surveyAnswers.push(parseInt(questionSelection));
+            }
         }
-    
-        let surveyName = $("#name").val().trim();
-        let surveyPhoto = $("#photo").val().trim();
-        var surveyResults = {
-            "name" : surveyName,
-            "photo" : surveyPhoto,
-            "scores" : surveyAnswers
-        };
+        if(blankFlag){
+            $('.description').append("<h1>Please fill in the rest of the survey!🐸</h1>");
+        }
+        else{
+            let surveyName = $("#name").val().trim();
+            let surveyPhoto = $("#photo").val().trim();
+            var surveyResults = {
+                "name" : surveyName,
+                "photo" : surveyPhoto,
+                "scores" : surveyAnswers
+            };
 
-        $.post("/api/friends", surveyResults,
-            function(data) {
-                if (data) {
-                    alert("Yay! You are officially booked!");
-                }
+            function runFriendQuery(surveyAnswers){
+                var currentURL = window.location.origin;
 
-            $("#name").val('');
-            $("#photo").val('');
-        });
+                $.ajax({
+                    url: currentURL + "/api/friends",
+                    method: "GET"
+                }).then(function(friendData){
+                    
+                    let min = 0;
+                    let matchIndex = 0;
+                    for (var i = 0; i < friendData.length; i++){
+                        let sumOfDifference = 0;
+                        for (let j = 0; j < friendData[i].scores.length; j++){
+                            sumOfDifference += Math.abs(parseInt(friendData[i].scores[j]) - parseInt(surveyAnswers[j]));
+                        }
+
+                        if(min === 0){
+                            min = sumOfDifference;
+                            matchIndex = i;
+                        }
+                        else if (sumOfDifference < min){
+                            min = sumOfDifference
+                            matchIndex = i;
+                        }
+                        else{}
+                    }
+                    
+                    $('.js-header').append(`<h1>${friendData[matchIndex].name}</h1>`);
+                    $('.js-image').append(`<img src = '${friendData[matchIndex].photo}' width = '400'>`);
+                    for (let i = 1; i < 11; i++){
+                        $(`input[name='q${i}']:checked`).removeAttr('checked');
+                    }
+                });
+            }
+            
+            runFriendQuery(surveyAnswers);
+
+            $.post("/api/friends", surveyResults,
+                function(data) {
+
+                $("#name").val('');
+                $("#photo").val('');
+                
+            });
+        }
     });
 
 </script>
