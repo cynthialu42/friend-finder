@@ -8,375 +8,407 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'awesome-birds';
+            src: url('../fonts/AwesomeBirds.ttf') format('truetype');
+        }
+        html, body {
+            height: 100%;
+        }
     
+        .ui.grid {
+            height: 100%;
+        }
+        .title {
+            font-family: 'awesome-birds';
+            font-size: 3em;
+            font-weight:100;
+        }
+        
+        form{
+            margin-bottom: 2em;
+        }
+    </style>
 </head>
 <body>
+
     <div class="ui container">
-        <h1>Survey</h1>
+        <h1 class = "ui teal centered header"><p class = "ui teal title" >(Answer some questions to find your new best FRIEND!)</p></h1>
         <hr>
         <form class="ui form">
-            <div class="field">
-                <label>Name (Required)</label>
-                <input type="text" name="name" placeholder="name" id = "name">
-            </div>
-            <div class="field">
-                <label>Photo Link</label>
-                <input type="text" name="photo" placeholder="photo" id = "photo">
-            </div>
-            <hr>
-
-            <!-- Question 1 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q1" value = "1">
-                        <label>1</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q1" value = "2">
-                        <label>2</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q1" value = "3">
-                        <label>3</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q1" value = "4">
-                        <label>4</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q1" value = "5">
-                        <label>5</label>
-                       
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 2 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q2" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q2" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q2" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q2" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q2" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 3 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q3" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q3" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q3" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q3" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q3" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 4 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q4" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q4" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q4" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q4" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q4" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 5 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q5" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q5" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q5" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q5" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q5" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 6 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q6" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q6" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q6" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q6" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q6" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 7 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q7" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q7" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q7" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q7" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q7" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 8 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q8" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q8" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q8" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q8" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q8" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 9 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q9" value = "1">
-                        <label>Once a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q9" value = "2">
-                        <label>2-3 times a week</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q9" value = "3">
-                        <label>Once a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q9" value = "4">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input type="radio" name="q9" value = "5">
-                        <label>Twice a day</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <!-- Question 10 -->
-            <label class = "ui text container" >How often do you use checkboxes?</label>
-            <div class="inline fields ui text container">
-                <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="q10" value = "1">
-                            <label>Once a week</label>
-                        </div>
+            <div class="row">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Name (Required)</label>
+                        <input type="text" name="name" placeholder="name" id = "name">
                     </div>
                     <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="q10" value = "2">
-                            <label>2-3 times a week</label>
+                        <label>Photo Link (Required)</label>
+                        <input type="text" name="photo" placeholder="photo" id = "photo">
+                    </div>
+                </div>
+                <hr>
+            </div>
+            
+            <div class="ui two column grid">
+                <div class="column">
+                    <!-- Question 1 -->
+                    <label class = "" >Q1. Your mind is always buzzing with unexplored ideas and plans</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q1" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q1" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q1" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q1" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q1" value = "5">
+                                <label>5 (YES!)</label>
+                            
+                            </div>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="q10" value = "3">
-                            <label>Once a day</label>
+                    <br>
+                    <!-- Question 2 -->
+                    <label class = "" >Q2. Generally speaking, you rely more on your experience than your imagination</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q2" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q2" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q2" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q2" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q2" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="q10" value = "4">
-                            <label>Twice a day</label>
+                    <br>
+                    <!-- Question 3 -->
+                    <label class = "" >Q3. You find it easy to stay relaxed and focused even when there is some pressure</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q3" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q3" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q3" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q3" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q3" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="ui radio checkbox">
-                            <input type="radio" name="q10" value = "5">
-                            <label>Twice a day</label>
+                    <br>
+                    <!-- Question 4 -->
+                    <label class = "" >Q4. You rarely do something just out of sheer curiosity</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q4" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q4" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q4" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q4" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q4" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
                         </div>
                     </div>
+                    <br>
+                    <!-- Question 5 -->
+                    <label class = "" >Q5. People can rarely upset you</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q5" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q5" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q5" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q5" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q5" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class = "column">
+                    <!-- Question 6 -->
+                    <label class = "" >Q6. It is often difficult for you to relate to other people’s feelings?</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q6" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q6" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q6" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q6" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q6" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Question 7 -->
+                    <label class = "" >Q7. In a discussion, truth should be more important than people’s sensitivities</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q7" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q7" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q7" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q7" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q7" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Question 8 -->
+                    <label class = "" >Q8. You rarely get carried away by fantasies and ideas</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q8" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q8" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q8" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q8" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q8" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Question 9 -->
+                    <label class = "" >Q9. You think that everyone’s views should be respected regardless of whether they are supported by facts or not</label>
+                    <div class="inline fields">
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q9" value = "1">
+                                <label>1 (NO!)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q9" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q9" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q9" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q9" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Question 10 -->
+                    <label class = "" >Q10. You feel more energetic after spending time with a group of people</label>
+                    <div class="inline fields">
+                        <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="q10" value = "1">
+                                    <label>1 (NO!)</label>
+                                </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q10" value = "2">
+                                <label>2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q10" value = "3">
+                                <label>3</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q10" value = "4">
+                                <label>4</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="q10" value = "5">
+                                <label>5 (YES!)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
             <br>
-            <button class="ui button submit text container" type="submit">Submit</button>
+            <button class="ui button teal submit text container" type="submit">Submit</button>
         </form>
         <div class="ui modal">
             <i class="close icon"></i>
@@ -398,11 +430,21 @@
 <script>
     $('.ui.modal').modal('attach events', '.submit', 'show');
     $('.ui.modal').modal('attach events', '.ok', 'hide');
+
     $(".submit").on("click", function(event) {
         event.preventDefault();
         let blankFlag = false;
-        $('.js-header').empty()
+        $('.js-header').empty();
         $('.js-image').empty();
+        $('.description').empty();
+        var variousDescriptions = [
+            "Enjoys short walks to the fridge, crochet, and marshmallows with hot chocolate",
+            "Understands you are too busy to hang out but loves you anyways (as friends)",
+            "Contemplating opening up a cafe that only serves flavored milk",
+            "Let's play tag and make memories!",
+            "🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸🐸",
+            "... did I just get friendzoned?"
+        ];
         var surveyAnswers = [];
         for (let i = 1; i < 11; i++){
             let questionSelection = $(`input[name='q${i}']:checked`).val();
@@ -435,15 +477,16 @@
                     method: "GET"
                 }).then(function(friendData){
                     
-                    let min = 0;
+                    let min = -999;
                     let matchIndex = 0;
                     for (var i = 0; i < friendData.length; i++){
                         let sumOfDifference = 0;
                         for (let j = 0; j < friendData[i].scores.length; j++){
                             sumOfDifference += Math.abs(parseInt(friendData[i].scores[j]) - parseInt(surveyAnswers[j]));
+                            console.log(friendData[i].name);
                         }
-
-                        if(min === 0){
+                        console.log("sum of difference: for " +friendData[i].name + " "+ sumOfDifference);
+                        if(min === -999){
                             min = sumOfDifference;
                             matchIndex = i;
                         }
@@ -454,8 +497,12 @@
                         else{}
                     }
                     
+                    console.log("Min" + min);
+                    console.log("Index" + matchIndex);
                     $('.js-header').append(`<h1>${friendData[matchIndex].name}</h1>`);
                     $('.js-image').append(`<img src = '${friendData[matchIndex].photo}' width = '400'>`);
+                    let randomDescription = Math.floor(Math.random()* variousDescriptions.length);
+                    $('.description').append(`<h1>${variousDescriptions[randomDescription]}</h1>`);
                     for (let i = 1; i < 11; i++){
                         $(`input[name='q${i}']:checked`).removeAttr('checked');
                     }

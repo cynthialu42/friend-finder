@@ -8,9 +8,61 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'awesome-birds';
+            src: url('../fonts/AwesomeBirds.ttf') format('truetype');
+        }
+        html, body {
+            height: 100%;
+
+            
+        }
+    
+        .ui.grid {
+            height: 100%;
+        }
+        p {
+            font-family: 'awesome-birds';
+            font-size: 10em;
+            color: black;
+            font-weight:100;
+        }
+        
+        .cyl-jumbotron{
+            margin: 4em 0em;
+        }
+       
+    </style>
 </head>
 <body>
-    <h1>Home</h1>
-    <a href = "/survey">Survey</a>
+    <!-- <div class="ui vertical masthead center aligned segment">
+        <div class="ui container">
+            
+        </div>
+        <div class="ui text container">
+            <h1 class = "ui center aligned header">Home</h1>
+
+            <a class = "ui pink button huge" href = "/survey">Survey</a>
+        </div>
+        
+    </div> -->
+    <div class="ui padded equal height grid">
+        <div class="sixteen wide stretched column">
+            <div class="ui equal height grid">
+                <div class="sixteen wide teal column"></div>
+                <div class = "sixteen wide column cyl-jumbotron">
+                    <div class = "ui center aligned header">
+                        <p>(Let's Just Be Friends)</p>
+                    </div>
+                    <div class="ui center aligned sixteen wide header">
+                        <a class = "ui pink button massive center aligned cyl-btn" href = "/survey">Find a friend... <i class=" child icon"></i><i class=" child icon"></i></a>
+                    </div>
+                </div>
+                <div class="sixteen wide teal column"></div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
