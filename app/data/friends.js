@@ -19,31 +19,31 @@ let matches = [
         "name":"Pusheen",
         "photo":"https://78.media.tumblr.com/tumblr_m5mlt6a0EH1qhy6c9o1_400.gif",
         "scores":[
+            1,
+            2,
+            3,
+            4,
+            1,
+            2,
+            3,
+            4,
             5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5,
-            5
+            1
           ]
     },
     {
         "name":"Snoopy",
         "photo":"https://i.pinimg.com/originals/73/f0/02/73f002cade6cbaaa2e2be806417dee8e.png",
         "scores":[
+            2,
             1,
+            2,
             1,
+            2,
             1,
+            2,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
+            2,
             1
         ]
     }
