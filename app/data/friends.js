@@ -1,7 +1,23 @@
 let matches = [
     {
-        "name":"Bird",
-        "photo":"https://dsx.weather.com/util/image/v/223bird.jpg?v=at&w=1280&h=720&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0",
+        "name":"Hobbes",
+        "photo":"https://i.pinimg.com/236x/6e/f7/69/6ef769734a22e0e38d86808078f662a0.jpg",
+        "scores":[
+            2,
+            4,
+            5,
+            1,
+            1,
+            2,
+            4,
+            3,
+            1,
+            1
+        ]
+    },
+    {
+        "name":"Pusheen",
+        "photo":"https://78.media.tumblr.com/tumblr_m5mlt6a0EH1qhy6c9o1_400.gif",
         "scores":[
             5,
             5,
@@ -16,8 +32,8 @@ let matches = [
           ]
     },
     {
-        "name":"Friend",
-        "photo":"https://files.allaboutbirds.net/wp-content/uploads/2015/06/prow-featured.jpg",
+        "name":"Snoopy",
+        "photo":"https://i.pinimg.com/originals/73/f0/02/73f002cade6cbaaa2e2be806417dee8e.png",
         "scores":[
             1,
             1,
@@ -30,7 +46,8 @@ let matches = [
             1,
             1
         ]
-    }    
+    }
+      
 ];
 
 module.exports = matches;
